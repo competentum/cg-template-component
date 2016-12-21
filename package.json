@@ -4,8 +4,14 @@
   "description": "Template Project for Competentum Group Components",
   "main": "build/cg-template-component.min.js",
   "scripts": {
+    "build": "webpack",
+    "lint": "gulp lint",
     "test": "jest"
   },
+  "pre-commit": [
+    "test",
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/competentum/cg-template-component.git"
