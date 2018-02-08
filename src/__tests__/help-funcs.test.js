@@ -1,12 +1,11 @@
-'use strict';
-var helpFuncs = require('./../help-funcs').default;
+/* eslint-disable no-magic-numbers */
+const helpFuncs = require('./../help-funcs').default;
 
-describe('Help functions:', function () {
+describe('Help functions:', () => {
 
-  describe('sum', function () {
-    it('should calculate right value', function () {
+  describe('sum', () => {
+    test('should calculate right value', () => {
       expect(helpFuncs.sum(15, 2)).toBe(17);
     });
   });
-
 });

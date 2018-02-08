@@ -1,14 +1,12 @@
-'use strict';
-
 export default {
 
   /**
    * This function here just to demonstrate test case
-   * @param {number} a
-   * @param {number} b
-   * @returns {number}
+   * @param {number} num1
+   * @param {number} num2
+   * @returns {number} sum of num1 and num2
    */
-  sum: function (a, b) {
-    return a + b;
+  sum(num1, num2) {
+    return num1 + num2;
   }
 };

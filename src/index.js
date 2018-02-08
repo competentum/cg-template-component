@@ -1,31 +1,33 @@
-'use strict';
-
 import './common.less';
 
 import EventEmitter from 'events';
 import utils from 'cg-component-utils';
 
-// todo: describe settings properties here
+// Todo: describe settings properties here
 /**
  * Slider's customizing settings
  * @typedef {Object} TemplateComponentSettings
  * @property {Element|string} container - DOM Element or element id in which slider should be rendered.
- *                                        This property can be omitted. In this case new DOM element will be created and can be accessed via `sliderInstance.container`
+ *                                        This property can be omitted. In this case new DOM element will be created
+ *                                        and can be accessed via `sliderInstance.container`
  */
 
+/**
+ * Template class
+ */
 class CgTemplateComponent extends EventEmitter {
 
   /**
-   *
-   * @returns {TemplateComponentSettings}
+   * @returns {TemplateComponentSettings} settings object
    * @constructor
    */
   static get DEFAULT_SETTINGS() {
     if (!this._DEFAULT_SETTINGS) {
       this._DEFAULT_SETTINGS = {
-        // todo: add defaults here
+        // Todo: add defaults here
       };
     }
+
     return this._DEFAULT_SETTINGS;
   }
 
@@ -35,6 +37,7 @@ class CgTemplateComponent extends EventEmitter {
         CHANGE: 'change'
       };
     }
+
     return this._EVENTS;
   }
 
@@ -45,7 +48,7 @@ class CgTemplateComponent extends EventEmitter {
   constructor(settings) {
     super();
 
-    //todo: initialization
+    // Todo: initialization
     this.settings = settings;
   }
 
@@ -53,10 +56,11 @@ class CgTemplateComponent extends EventEmitter {
    * @private
    */
   _render() {
-    //todo: draw here
-    var elementHTML = `
+    // Todo: draw here
+    const elementHTML = `
       <div></div>
     `;
+
     utils.createHTML(elementHTML);
   }
 
